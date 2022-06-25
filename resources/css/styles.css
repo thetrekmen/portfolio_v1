@@ -4,6 +4,7 @@
     --pink: #FF51D8;
     --orange: #FF6E10;
     --background: #1D1929;
+    --background-grey: #272333;
     --white: #FFFFFF;
     --off-white: #C4C4C4;
 }
@@ -21,8 +22,6 @@ html, body{
 main {
     width: 90%;
     margin: 0 auto;
-    height: 100%;
-    
 }
 
 a:link { text-decoration: none; }
@@ -83,11 +82,12 @@ nav {
 }
 
 .nav-links li a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--off-white);
 }
 
-.nav-links li:nth-child(2) {
+.nav-links li:nth-child(2),
+.nav-links li:nth-child(3) {
     margin-left: 4rem;
 }
 
@@ -136,8 +136,10 @@ nav {
     height: 2rem;
     /* outline: 1px blue solid; */
     position: relative;
+}
 
-
+.motivations-string-container {
+    position: relative;
 }
 
 .motivations-string-container::before {
@@ -148,11 +150,31 @@ nav {
     height: 100%;
     top: 0;
     right: 0;
+    animation: blinking 0.7s steps(3) infinite;
 }
 
-.motivations-string {
+@keyframes blinking {
+    0%,75% {
+        opacity: 1;;
+    } 76%,100% {
+        opacity: 0;
+    }
+}
+
+.motivations-string-container .motivations-string {
     position: relative;
+    height: 2rem;
     /* outline: 1px red solid; */
+    animation: typeWriter 8s steps(47) infinite;
+    overflow: hidden;
+}
+
+@keyframes typeWriter {
+    0% {
+        width: 0;
+    } 90% {
+        width: 651.78px;
+    }
 }
 
 /* .motivations-string-container::before,
@@ -166,11 +188,7 @@ nav {
 } */
 
 
-@keyframes typeWriter {
-    to {
-        left: 100%;
-    }
-}
+
 
 
 /* .motivations-string-container:nth-child(2) {
@@ -188,23 +206,11 @@ nav {
     }
 }
 
-
-.skills-container {
-    /* outline: 1px red solid; */
-}
-
-.skills-container div{
-    
-}
-
 .skills-variable-statment {
     /* outline: 1px blue solid; */
     align-items:baseline;
     position: relative;
 
-}
-
-.skills-variable {
 }
 
 .skills-variable-statment div {
@@ -224,13 +230,6 @@ nav {
 .sss {
     position: absolute;
     bottom: 0;
-    
-}
-
-.skill-container {
-
-    /* outline: 1px green solid; */
-
 }
 
 .skills-icons {
@@ -252,18 +251,123 @@ nav {
     color: var(--orange);
 }
 
-.projects-container {
-
-}
-
 .projects-container div{
     display: inline-block;
 }
 
-.return-container {
-
-}
-
 .return-container div{
     display: inline-block;
+}
+
+#about-section-title div {
+    color: var(--off-white);
+    font-size: 6rem;
+    font-weight: 400;
+    width: 100%;
+    opacity: 40%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-section-container {
+    width: 100%;
+    background-color: var(--background-grey);
+    box-shadow: 10px 10px 10px black;
+}
+
+.about-section-container h2 {
+    margin: 2rem auto;
+    color: var(--off-white);
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.about-section-container p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: var(--off-white);
+    line-height: 3rem;
+    letter-spacing: .1rem;
+}
+
+.icon-row-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon-row-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-icon {
+    margin: 0 auto;
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+
+#portfolio-section-title div {
+    color: var(--off-white);
+    font-size: 6rem;
+    font-weight: 400;
+    width: 100%;
+    opacity: 40%;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.portfolio-section-container {
+    width: 100%;
+    background-color: var(--background-grey);
+    box-shadow: 10px 10px 10px black;
+}
+
+.portfolio-section-container h2 {
+    margin: 2rem auto;
+    color: var(--off-white);
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.about-section-container p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: var(--off-white);
+    line-height: 3rem;
+    letter-spacing: .1rem;
+}
+
+.icon-row-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon-row-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-icon {
+    margin: 0 auto;
+    font-size: 4rem;
+    margin: 2rem;
 }
