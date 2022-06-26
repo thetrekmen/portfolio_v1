@@ -1,17 +1,19 @@
 :root {
     --yellow: #FFD92E;
     --cyan: #00FFF6;
+    --cyan-dark: #014846;
+    --cyan-opacity: rgba(0, 255, 246, .2);
     --pink: #FF51D8;
     --orange: #FF6E10;
     --background: #1D1929;
     --background-grey: #272333;
     --white: #FFFFFF;
     --off-white: #C4C4C4;
+    --navbar: rgba(29,25,41,.9);
 }
 
 body, html {
     min-height: 100vh;
-    color: var(--gray-8);
     margin: 0;
     padding: 0;
     border: 0;
@@ -88,7 +90,7 @@ ul {
 nav {
     width: 100%;
     margin: 0 auto;
-    background-color: var(--background);
+    background-color: var(--navbar);
     position: fixed;
     z-index: 100;
 
@@ -384,66 +386,157 @@ nav {
 
 .portfolio-section-container {
     width: 100%;
+     padding: 1rem 0;
     background-color: var(--background-grey);
     box-shadow: 10px 10px 10px black;
     border-radius: .5rem;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 32% 32% 32%;
+    row-gap: 1rem;
+    column-gap: 1rem;
     margin-bottom: 4.5rem;
+    overflow: hidden;
+    justify-content: center;
 }
 
-.portfolio-projects:nth-child(1) {
-    background-color: #FF51D8;
+.portfolio-projects-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-projects-1 {
+    background-color: var(--cyan-opacity);
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 21.37.06.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.portfolio-projects:nth-child(2) {
-    background-color: #FF51D8;
+.portfolio-projects-2 {
+    background-color: var(--cyan-opacity);
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.14.46.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.portfolio-projects:nth-child(3) {
-    background-color: #FF51D8;
+.portfolio-projects-3 {
+    background-color: var(--cyan-opacity);
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.07.19.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.portfolio-projects:nth-child(4) {
-    background-color: #FF51D8;
+.portfolio-projects-4 {
+    background-color: var(--cyan-opacity);
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.07.28.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.portfolio-projects:nth-child(5) {
-    background-color: #FF51D8;
+.portfolio-projects-5 {
+    background-color: var(--cyan-opacity);
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.07.40.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.portfolio-projects:nth-child(6) {
-    background-color: #FF51D8;
+.portfolio-projects-6 {
+    background-color: var(--cyan-opacity);
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.09.58.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.background-tint {
+    background-blend-mode:soft-light;
+  }
+
+.portfolio-projects-1:hover,
+.portfolio-projects-2:hover,
+.portfolio-projects-3:hover,
+.portfolio-projects-4:hover,
+.portfolio-projects-5:hover,
+.portfolio-projects-6:hover  {
+    background-color: var(--cyan-dark);
+}
+
+.explore-more-button-container {
+    padding: 2rem;
+    padding-bottom: 5rem;
+    /* padding-top: 50rem; */
+}
+
+.explore-more-button {
+    background-color: var(--background-grey);
+    border-radius: 3.5rem;
+    box-shadow: 1px 3px 3px var(--pink);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.explore-more-button:hover {
+    background-color: rgb(71, 47, 72);
+    transition: background-color 200ms ease-in;
+}
+  
+.explore-more-button:active {
+    transition: outline 100ms ease-in;
+    /* background-color: var(--background-grey); */
+    box-shadow: .5px .5px 3px;
+    transform: translateY(4px);
+}
+
+
+.project-name-1,
+.project-name-2,
+.project-name-3,
+.project-name-4,
+.project-name-5,
+.project-name-6 {
+    color:var(--off-white);
+    font-size: 2rem;
+    font-weight: 200;
+    padding-top: 50rem;
+    overflow: none;
+    z-index: -1;
+}
+
+
 
 
