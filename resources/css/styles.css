@@ -9,19 +9,51 @@
     --off-white: #C4C4C4;
 }
 
-html, body{
+body, html {
+    min-height: 100vh;
+    color: var(--gray-8);
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font-size: 16px;
     background-color: var(--background);
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 7.5rem);
 }
 
 main {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+}
+
+.modal {
+    padding: 1em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+}
+  
+.modal::backdrop {
+    background: rgb(0 0 0 / 0.5);
+}
+
+.button {
+    border: 0;
+    cursor: pointer;
+    background: var(--gray-8);
+    color: var(--gray-2);
+    padding: var(--size-2) var(--size-4);
+}
+  
+.button:hover,
+.button:focus {
+    background: var(--cyan-9);
+}
+  
+form {
+    display: grid;
+    gap: 1em;
 }
 
 a:link { text-decoration: none; }
@@ -32,7 +64,6 @@ a:active { text-decoration: none; }
 ul {
     list-style-type: none;
 }
-
 
 .color-yellow {
     color: var(--yellow);
@@ -91,6 +122,15 @@ nav {
     margin-left: 4rem;
 }
 
+.open-button {
+    cursor: pointer;
+}
+
+.btn-secondary {
+    cursor: pointer;
+    background-color: red;
+}
+
 .hero-section {
     width: 100%;
     min-height: 100vh;
@@ -117,6 +157,28 @@ nav {
 
 .hero-name {
     font-size: 4rem;
+}
+
+.hero-project-button {
+    display: inline-block;
+    background-color: var(--background-grey);
+    padding: 1rem 2rem;
+    border-radius: 3.5rem;
+    box-shadow: 3px 3px 3px var(--pink);
+
+    cursor: pointer;
+}
+
+.hero-project-button:hover {
+    background-color: rgb(71, 47, 72);
+    transition: background-color 200ms ease-in;
+}
+  
+.hero-project-button:active {
+    transition: outline 100ms ease-in;
+    /* background-color: var(--background-grey); */
+    box-shadow: .5px .5px 3px;
+    transform: translateY(4px);
 }
 
 .function-frontEndDeveloper-container div {
@@ -187,10 +249,6 @@ nav {
     right: 0;
 } */
 
-
-
-
-
 /* .motivations-string-container:nth-child(2) {
     animation: fadeIn 5s infinite alternate;
     color: var(--orange);
@@ -227,11 +285,6 @@ nav {
     position: relative;
 }
 
-.sss {
-    position: absolute;
-    bottom: 0;
-}
-
 .skills-icons {
     text-align: center;
 }
@@ -257,6 +310,7 @@ nav {
 
 .return-container div{
     display: inline-block;
+    height: 4rem;
 }
 
 #about-section-title div {
@@ -273,6 +327,7 @@ nav {
     width: 100%;
     background-color: var(--background-grey);
     box-shadow: 10px 10px 10px black;
+    border-radius: .5rem;
 }
 
 .about-section-container h2 {
@@ -323,13 +378,14 @@ nav {
     width: 100%;
     opacity: 40%;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4.5rem;
 }
 
 .portfolio-section-container {
     width: 100%;
     background-color: var(--background-grey);
     box-shadow: 10px 10px 10px black;
+    border-radius: .5rem;
 }
 
 .portfolio-section-container h2 {
@@ -341,7 +397,7 @@ nav {
     padding-top: 2rem;
 }
 
-.about-section-container p {
+.portfolio-section-container p {
     width: 90%;
     margin: 0 auto;
     font-size: 1.5rem;
@@ -371,3 +427,5 @@ nav {
     font-size: 4rem;
     margin: 2rem;
 }
+
+  

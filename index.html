@@ -1,225 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/styles.css">
-    <title>Patrick Jones</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/css/styles.css">
+        <title>Patrick Jones</title>
+    </head>
+    
+    <body>
+    
+        <header>
 
-<body>
-
-    <header>
-        <nav>
-            <div class="logo-nav-wrapper">
-                <a class="logo-nav" href="#">
-                    <img src="./resources/svg/Logo.svg" alt="">
-                </a>
-                <ul>
-                    <div class="nav-links">
-                        <li><a href="#about-section-title">About</a></li>
-                        <li><a href="#portfolio-section-title">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </div>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <section class="hero-section">
-            <div class="function-wrapper">
-                <div class="function-frontEndDeveloper-container">
-                    <div class="color-yellow opac20">function</div>
-                    <div class="color-cyan opac70">frontEndDeveloper</div>
-                    <div class="color-yellow opac20">(</div>
-                    <div class="color-pink hero-name"> patrickJones </div>
-                    <div class="color-yellow opac20">)</div>
-                    <div class="color-yellow opac20">{</div>
-                </div>
-                <br>
-                <div class="motivations-syntax-container">
-                    <div class="motivations-wrapper">
-                        <div class="motivations-container">
-                            <div class="color-yellow opac20">let</div>
-                            <div class="color-pink opac70">passions</div>
-                            <div class="color-white opac20">=</div>
+            <nav>
+                <div class="logo-nav-wrapper">
+                    <a class="logo-nav" href="#">
+                        <img src="./resources/svg/Logo.svg" alt="">
+                    </a>
+                    <ul>
+                        <div class="nav-links">
+                            <li><a href="#about-section-title">About</a></li>
+                            <li><a href="#portfolio-section-title">Projects</a></li>
+                            <li><a class="button open-button">Get In Touch</a></li>
                         </div>
-                        <div class="motivations-string-wrapper">
-                            <div class="motivation-blinker">
-                                <div class="motivations-string-container color-orange">
-                                    <div class="motivations-string">"To build beautiful front-end web applications"</div>
+                    </ul>
+                </div>
+            </nav>
+
+            <dialog class="modal" id="modal">
+                <h2>An interesting title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+                <button class="button close-button">close modal</button>
+                <form class="form" method="dialog">
+                    <label>Your name <input type="text"></label>
+                    <label>Your email <input type="email"></label>
+                    <button class="button" type="submit">submit form</button>
+                </form>
+            </dialog>
+
+        </header>
+
+        <main>
+
+            <section class="hero-section">
+                
+                <div class="function-wrapper">
+                    <div class="function-frontEndDeveloper-container">
+                        <div class="color-yellow opac20">function</div>
+                        <div class="color-cyan opac70">frontEndDeveloper</div>
+                        <div class="color-yellow opac20">(</div>
+                        <div class="color-pink hero-name"> patrickJones </div>
+                        <div class="color-yellow opac20">)</div>
+                        <div class="color-yellow opac20">{</div>
+                    </div>
+                    <br>
+                    <div class="motivations-syntax-container">
+                        <div class="motivations-wrapper">
+                            <div class="motivations-container">
+                                <div class="color-yellow opac20">let</div>
+                                <div class="color-pink opac70">passions</div>
+                                <div class="color-white opac20">=</div>
+                            </div>
+                            <div class="motivations-string-wrapper">
+                                <div class="motivation-blinker">
+                                    <div class="motivations-string-container color-orange">
+                                        <div class="motivations-string">"To build beautiful front-end web applications"</div>
+                                    </div>
+                                </div>
+                                <!-- <div class="motivations-string-container color-orange">
+                                    <div>"I have a strong passion towards all things javascript"</div>
+                                    <div class="color-white opac20">;</div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <br>
+                        <div class="skills-container">
+                            <div class="skills-variable-statment">
+                                <div class="skills-variable-wrapper">
+                                    <div class="color-yellow skills-variable opac20">let</div>
+                                    <div class="color-pink skills-variable opac70">skills</div>
+                                    <div class="color-white skills-variable opac20">=</div>
+                                    <div class="color-pink skills-variable opac20"><span>[</span></div>
+                                    <div class="color-pink skills-variable"><span>html</span></div>
+                                    <div class="color-white skills-variable opac20"><span>,</span></div>
+                                    <div class="color-pink skills-variable"><span>css</span></div>
+                                    <div class="color-white skills-variable opac20"><span>,</span></div>
+                                    <div class="color-pink skills-variable"><span>javascript</span></div>
+                                    <div class="color-pink skills-variable opac20"><span>]</span></div>
+                                    <div class="color-white skills-variable opac20"><span>;</span></div>
                                 </div>
                             </div>
-                            <!-- <div class="motivations-string-container color-orange">
-                                <div>"I have a strong passion towards all things javascript"</div>
-                                <div class="color-white opac20">;</div>
-                            </div> -->
+                        </div>
+                        <br>
+                        <div class="projects-container">
+                            <div class="color-yellow opac20">const</div>
+                            <div class="color-pink opac20">projects</div>
+                            <div class="color-white opac20">=</div>
+                            <div class="color-pink opac20">passions</div>
+                            <div class="color-yellow opac20">+</div>
+                            <div class="color-pink opac20">skills</div>
+                            <div class="color-white opac20">;</div>
+                        </div>
+                        <br>
+                        <div class="return-container">
+                            <div class="color-yellow opac20">return</div>
+                            <a  class="color-pink hero-project-button" href="#portfolio-section-title">projects</a>
+                            <div class="color-white opac20">;</div>
                         </div>
                     </div>
-                    <br>
-                    <div class="skills-container">
-                        <div class="skills-variable-statment">
-                            <div class="skills-variable-wrapper">
-                                <div class="color-yellow skills-variable opac20">let</div>
-                                <div class="color-pink skills-variable opac70">skills</div>
-                                <div class="color-white skills-variable opac20">=</div>
-                                <div class="color-pink skills-variable opac20"><span>[</span></div>
-                                <div class="color-pink skills-variable"><span>html</span></div>
-                                <div class="color-white skills-variable opac20"><span>,</span></div>
-                                <div class="color-pink skills-variable"><span>css</span></div>
-                                <div class="color-white skills-variable opac20"><span>,</span></div>
-                                <div class="color-pink skills-variable"><span>javascript</span></div>
-                                <div class="color-pink skills-variable opac20"><span>]</span></div>
-                                <div class="color-white skills-variable opac20"><span>;</span></div>
+                    <div class="color-yellow opac20">}</div>
+                </div>
+    
+            </section>
+    
+            <section class="about-section-wrapper">
+    
+                <div id="about-section-title">
+                    <div>About Me</div>
+                </div>
+    
+                <div class="about-section-container">
+                    <h2>
+                        Front-end Web Developer
+                    </h2>
+                    <p>
+                        I&#8217;m Patrick Jones, a Maryland native <span class="color-cyan">Front-end Web Developer</span>.  I&#8217;m typically drawn towards all things tech. My <span class="color-cyan">web development</span> journey grew from my love for digital art. <br>
+                        I&#8217;m obsessive about <span class="color-cyan">solving complex problems</span>, making fun and <span class="color-cyan">interactive interfaces</span>, and <span class="color-cyan">thinking outside the box</span> to design web experiences everyone can enjoy.
+                    </p>
+                    <div class="icon-row-1">
+                        <div class="about-icon">
+                            <i class="devicon-html5-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-git-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-github-original colored"></i>
+                        </div>
+                    </div>
+                    <div class="icon-row-2">
+                        <div class="about-icon">
+                            <i class="devicon-html5-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-git-plain colored"></i>
+                        </div>
+                        <div class="about-icon">
+                            <i class="devicon-github-original colored"></i>
+                        </div>
+                    </div>
+    
+    
+    
+                </div>
+                
+            </section>
+    
+            <section class="portfolio-section-wrapper">
+    
+                <div id="portfolio-section-title">
+                    <div>Projects</div>
+                </div>
+    
+                <div class="portfolio-section-container">
+                    
+                    <div class="portfolio-visual-container"></div>
+                    <div class="portfolio-text-container">
+                        <h2>
+                            Front-end Web Developer
+                        </h2>
+                        <p>
+                            I&#8217;m Patrick Jones, a Maryland native <span class="color-cyan">Front-end Web Developer</span>.  I&#8217;m typically drawn towards all things tech. My <span class="color-cyan">web development</span> journey grew from my love for digital art. <br>
+                            I&#8217;m obsessive about <span class="color-cyan">solving complex problems</span>, making fun and <span class="color-cyan">interactive interfaces</span>, and <span class="color-cyan">thinking outside the box</span> to design web experiences everyone can enjoy.
+                        </p>
+                        <div class="icon-row-1">
+                            <div class="about-icon">
+                                <i class="devicon-html5-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-css3-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-git-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-github-original colored"></i>
+                            </div>
+                        </div>
+                        <div class="icon-row-2">
+                            <div class="about-icon">
+                                <i class="devicon-html5-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-css3-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-git-plain colored"></i>
+                            </div>
+                            <div class="about-icon">
+                                <i class="devicon-github-original colored"></i>
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="projects-container">
-                        <div class="color-yellow opac20">const</div>
-                        <div class="color-pink opac20">projects</div>
-                        <div class="color-white opac20">=</div>
-                        <div class="color-pink opac20">passions</div>
-                        <div class="color-yellow opac20">+</div>
-                        <div class="color-pink opac20">skills</div>
-                        <div class="color-white opac20">;</div>
-                    </div>
-                    <br>
-                    <div class="return-container">
-                        <div class="color-yellow opac20">return</div>
-                        <div class="color-pink">projects</div>
-                        <div class="color-white opac20">;</div>
-                    </div>
+
+                    
                 </div>
-                <div class="color-yellow opac20">}</div>
-            </div>
-
-        </section>
-
-        <section class="about-section-wrapper">
-
-            <div id="about-section-title">
-                <div>About Me</div>
-            </div>
-
-            <div class="about-section-container">
-                <h2>
-                    Front-end Web Developer
-                </h2>
-                <p>
-                    I&#8217;m Patrick Jones, a Maryland native <span class="color-cyan">Front-end Web Developer</span>.  I&#8217;m typically drawn towards all things tech. My <span class="color-cyan">web development</span> journey grew from my love for digital art. <br>
-                    I&#8217;m obsessive about <span class="color-cyan">solving complex problems</span>, making fun and <span class="color-cyan">interactive interfaces</span>, and <span class="color-cyan">thinking outside the box</span> to design web experiences everyone can enjoy.
-                </p>
-                <div class="icon-row-1">
-                    <div class="about-icon">
-                        <i class="devicon-html5-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-css3-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-javascript-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-git-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-github-original colored"></i>
-                    </div>
-                </div>
-                <div class="icon-row-2">
-                    <div class="about-icon">
-                        <i class="devicon-html5-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-css3-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-javascript-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-git-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-github-original colored"></i>
-                    </div>
-                </div>
+                
+            </section>
+    
+        </main>
 
 
-
-            </div>
-            
-        </section>
-
-        <section class="portfolio-section-wrapper">
-
-            <div id="portfolio-section-title">
-                <div>Portfolio</div>
-            </div>
-
-            <div class="about-section-container">
-                <h2>
-                    Front-end Web Developer
-                </h2>
-                <p>
-                    I&#8217;m Patrick Jones, a Maryland native <span class="color-cyan">Front-end Web Developer</span>.  I&#8217;m typically drawn towards all things tech. My <span class="color-cyan">web development</span> journey grew from my love for digital art. <br>
-                    I&#8217;m obsessive about <span class="color-cyan">solving complex problems</span>, making fun and <span class="color-cyan">interactive interfaces</span>, and <span class="color-cyan">thinking outside the box</span> to design web experiences everyone can enjoy.
-                </p>
-                <div class="icon-row-1">
-                    <div class="about-icon">
-                        <i class="devicon-html5-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-css3-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-javascript-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-git-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-github-original colored"></i>
-                    </div>
-                </div>
-                <div class="icon-row-2">
-                    <div class="about-icon">
-                        <i class="devicon-html5-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-css3-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-javascript-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-git-plain colored"></i>
-                    </div>
-                    <div class="about-icon">
-                        <i class="devicon-github-original colored"></i>
-                    </div>
-                </div>
-
-
-
-            </div>
-            
-        </section>
-
-
-    </main>
-
-    <footer>
-
-    </footer>
-
-</body>
-
+    <!--   
+    <form class="form" method="dialog">
+        <label>Your name <input type="text"></label>
+        <label>Your email <input type="email"></label>
+        <button class="button" type="submit">submit form</button>
+    </form>-->
+    </body>
+    <script type="text/javascript" src="/resources/js/app.js"></script>
 </html>
+
+
+
