@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./resources/css/styles.css">
         <title>Patrick Jones</title>
     </head>
@@ -69,13 +69,12 @@
                             <div class="motivations-string-wrapper">
                                 <div class="motivation-blinker">
                                     <div class="motivations-string-container color-orange">
-                                        <div class="motivations-string">"To build beautiful front-end web applications"</div>
+                                        <span class="color-orange opac20">"</span>
+                                        <span class="type"></span>
+                                        <span class="color-orange opac20">"</span>
+                                        <span class="color-white opac20">;</span>
                                     </div>
                                 </div>
-                                <!-- <div class="motivations-string-container color-orange">
-                                    <div>"I have a strong passion towards all things javascript"</div>
-                                    <div class="color-white opac20">;</div>
-                                </div> -->
                             </div>
                         </div>
                         <br>
@@ -109,7 +108,9 @@
                         <br>
                         <div class="return-container">
                             <div class="color-yellow opac20">return</div>
-                            <a  class="color-pink hero-project-button" href="#portfolio-section-title">projects</a>
+                            <div class="hero-project-button-wrapper">
+                                <a  class="color-pink hero-project-button" href="#portfolio-section-title">projects</a>
+                            </div>
                             <div class="color-white opac20">;</div>
                         </div>
                     </div>
@@ -179,82 +180,60 @@
                     <div>Projects</div>
                 </div>
     
-                <div class="portfolio-section-container">
+                    <div class="portfolio-section-container">
                     
-                    <div class="portfolio-projects-wrapper">
-                        <div class="portfolio-projects-1 background-tint">
-                            <div class="project-name-1">
-                                <h3>Project 1</h3>
-                            </div>
-                            <div class="explore-more-button-container">
-                                <a class="color-pink explore-more-button">Explore More</a>
-                            </div>
+                        <div class="portfolio-box1">
+
+                                <div class="portfolio-projects-1 background-tint">
+                                    <div class="project-name-large">
+                                        <h3>Project 1</h3>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="portfolio-box2">
+
+                                <div class="portfolio-projects-2 background-tint">
+                                    <div class="project-name-small">
+                                        <h3>Project 2</h3>
+                                    </div>
+                                </div>
+
+
+                                <div class="portfolio-projects-3 background-tint">
+                                    <div class="project-name-small">
+                                        <h3>Project 3</h3>
+                                    </div>
+                                </div>
+
+
+                                <div class="portfolio-projects-4 background-tint">
+                                    <div class="project-name-small">
+                                        <h3>Project 4</h3>
+                                    </div>
+                                </div>
+
                         </div>
                     </div>
-
-
-                    <div class="portfolio-projects-wrapper">
-                        <div class="portfolio-projects-2 background-tint">
-                            <div class="project-name-2">
-                                <h3>Project 2</h3>
-                            </div>
-                            <div class="explore-more-button-container">
-                                <a class="color-pink explore-more-button">Explore More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-projects-wrapper">
-                        <div class="portfolio-projects-3 background-tint">
-                            <div class="project-name-3">
-                                <h3>Project 3</h3>
-                            </div>
-                            <div class="explore-more-button-container">
-                                <a class="color-pink explore-more-button">Explore More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-projects-wrapper">
-                        <div class="portfolio-projects-4 background-tint">
-                            <div class="project-name-4">
-                                <h3>Project 4</h3>
-                            </div>
-                            <div class="explore-more-button-container">
-                                <a class="color-pink explore-more-button">Explore More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-projects-wrapper">
-                        <div class="portfolio-projects-5 background-tint">
-                            <div class="project-name-5">
-                                <h3>Project 5</h3>
-                            </div>
-                            <div class="explore-more-button-container">
-                                <a class="color-pink explore-more-button">Explore More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-projects-wrapper">
-                        <div class="portfolio-projects-6 background-tint">
-                            <div class="project-name-6">
-                                <h3>Project 6</h3>
-                            </div>
-                            <div class="explore-more-button-container">
-                                <a class="color-pink explore-more-button">Explore More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
                 
+            </section>
+
+            <section class="section-unknown">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus dolor distinctio explicabo quidem voluptatum, molestias assumenda aliquid aliquam nam alias quo. Nihil ad libero iste?</p>
             </section>
     
         </main>
     </body>
     <script type="text/javascript" src="/resources/js/app.js"></script>
+    <script src="./resources/js/ityped/index.js"></script>
+    <script>
+       window.ityped.init(document.querySelector(".type"), {
+           typeSpeed:  200,
+           backDelay:  5000,
+           loop: true,
+           strings: ["to build fun and interactive front-end applications everyone can love", "testing 2"]
+       })
+    </script>
 </html>
 
 
