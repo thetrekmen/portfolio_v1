@@ -31,20 +31,96 @@ body, html {
     scroll-padding-top: var(--scroll-padding, 7.5rem);
 }
 
+.filter-cyan {
+    filter: invert(95%) sepia(71%) saturate(6142%) hue-rotate(91deg) brightness(108%) contrast(107%);
+}
+
+.filter-pink {
+filter: invert(46%) sepia(64%) saturate(1895%) hue-rotate(287deg) brightness(102%) contrast(102%);
+}
+
 main {
     width: 80%;
     margin: 0 auto;
 }
 
+dialog h2 {
+    text-align: center;
+}
+
 .modal {
-    padding: 1em;
-    max-width: 50ch;
+    padding: 1em 3em;
+    max-width: 50vw;
     border: 0;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    background-color: var(--background);
+    color: var(--off-white);
+    clip-path: polygon(
+        0 5%,
+        2% 0,
+        100% 0,
+        100% 0%,
+        100% 95%,
+        98% 100%,
+        100% 100%,
+        0% 100%,
+        0% 100%
+      )
 }
   
 .modal::backdrop {
-    background: rgb(0 0 0 / 0.5);
+    background: rgb(0 0 0 / 0.7);
+}
+
+.modal-sections {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+}
+
+.info {
+    height: 2rem;
+}
+
+.message {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.message p {
+    padding: 0;
+    margin: 0;
+}
+
+.modal-inputs {
+    width: 100%;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.modal-icon-wrapper {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.modal-icons {
+    width: 3rem;
+    padding: 0 auto;
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
 }
 
 .button {
@@ -54,10 +130,74 @@ main {
     color: var(--gray-2);
     padding: var(--size-2) var(--size-4);
 }
+
+.mail-icon {
+    height: 7rem;
+    outline: 1px solid red;
+    position: absolute;
+    top: -2.2rem;
+    left: -2rem;
+}
+
+.mail-icon:active {
+    filter: drop-shadow(0 0 0.2em var(--pink));
+    /* filter: invert(46%) sepia(64%) saturate(1895%) hue-rotate(287deg) brightness(102%) contrast(102%); */
+
+}
+
+.submit-button {
+    display: inline-block;
+    background-color: var(--background-grey);
+    /* padding: .5rem 2rem; */
+    /* border-radius: 3.5rem; */
+    cursor: pointer;
+    width: 5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(
+        0 30%,
+        10% 0,
+        100% 0,
+        100% 0%,
+        100% 70%,
+        90% 100%,
+        10% 100%,
+        0% 100%,
+        0% 100%
+      )
+}
+
+.close-button:hover {
+    color: var(--white);
+}
   
-.button:hover,
-.button:focus {
-    background: var(--cyan-9);
+.submit-button:active {
+    transform: translateY(2px);
+    filter: drop-shadow(0 0 0.2em var(--pink));
+    -webkit-filter: drop-shadow(0 0 0.2em var(--pink));
+}
+
+.submit-button-wrapper:hover {
+    filter: drop-shadow(1px 0px 0px var(--pink))
+    drop-shadow(-1px 0px 0px var(--pink))
+    drop-shadow(0px 1px 0px var(--pink))
+    drop-shadow(0px -1px 0px var(--pink))
+    drop-shadow(1px 1px 0px var(--pink))
+    drop-shadow(-1px -1px 0px var(--pink))
+    drop-shadow(-1px 1px 0px var(--pink))
+    drop-shadow(1px -1px 0px var(--pink));
+    -webkit-filter: drop-shadow(1px 0px 0px var(--pink))
+    drop-shadow(-1px 0px 0px var(--pink))
+    drop-shadow(0px 1px 0px var(--pink))
+    drop-shadow(0px -1px 0px var(--pink))
+    drop-shadow(1px 1px 0px var(--pink))
+    drop-shadow(-1px -1px 0px var(--pink))
+    drop-shadow(-1px 1px 0px var(--pink))
+    drop-shadow(1px -1px 0px var(--pink));
 }
   
 form {
@@ -172,45 +312,27 @@ nav {
     font-size: 4rem;
 }
 
-.hero-project-button-wrapper {
-    display: inline-block;
-    top: 1.5rem;
-    position: relative;
-    width: 8rem;
-    height: .2rem;
-    box-sizing: border-box;
-    background-color: var(--pink);
-    /* border-radius: 3.5rem; */
-    /* box-shadow: 3px 3px 3px var(--pink); */
-    cursor: pointer;
-    clip-path: polygon(
-        0 30%,
-        10% 0,
-        90% 0,
-        100% 0%,
-        100% 70%,
-        90% 100%,
-        10% 100%,
-        0% 100%,
-        0% 100%
-      )
+.hero-project-button-wrapper:hover {
+    filter: drop-shadow(1px 0px 0px var(--pink))
+    drop-shadow(-1px 0px 0px var(--pink))
+    drop-shadow(0px 1px 0px var(--pink))
+    drop-shadow(0px -1px 0px var(--pink))
+    drop-shadow(1px 1px 0px var(--pink))
+    drop-shadow(-1px -1px 0px var(--pink))
+    drop-shadow(-1px 1px 0px var(--pink))
+    drop-shadow(1px -1px 0px var(--pink));
 }
 
 .hero-project-button {
-    position: absolute;
-    top: 1.5px;
-    left: 1.5px;
-    width: 7.8rem;
-    height: 3.8rem;
-    text-align: center;
+    display: inline-block;
     background-color: var(--background-grey);
+    padding: .5rem 2rem;
     /* border-radius: 3.5rem; */
-    /* box-shadow: 3px 3px 3px var(--pink); */
     cursor: pointer;
     clip-path: polygon(
         0 30%,
         10% 0,
-        90% 0,
+        100% 0,
         100% 0%,
         100% 70%,
         90% 100%,
@@ -224,14 +346,14 @@ nav {
     /* background-color: rgb(71, 47, 72); */
     transition: background-color 200ms ease-in;
     color: var(--pink);
-    text-shadow: 0 0 0.2em var(--pink);
 }
   
 .hero-project-button:active {
-    transition: outline 100ms ease-in;
+    /* transition: outline 100ms ease-in; */
     /* background-color: var(--background-grey); */
     box-shadow: .5px .5px 3px;
     transform: translateY(4px);
+    text-shadow: 0 0 0.2em var(--pink);
 }
 
 .function-frontEndDeveloper-container div {
