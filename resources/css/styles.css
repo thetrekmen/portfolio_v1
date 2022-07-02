@@ -27,7 +27,7 @@ body, html {
     background-color: var(--background);
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    scroll-padding-top: var(--scroll-padding, 7.5rem);
+    scroll-padding-top: var(--scroll-padding, 5.5rem);
 }
 
 .filter-cyan {
@@ -94,7 +94,7 @@ main {
     position: relative;
   }
 
-  [data-tooltip]:after {
+[data-tooltip]:after {
     content: attr(data-tooltip);
     position: absolute;
     background: var(--background);
@@ -109,15 +109,15 @@ main {
     -o-transition: opacity 0.75s ease-in-out;
     transition: opacity 0.75s ease-in-out;
     writing-mode: horizontal-tb;
-  }
+}
 
-  [data-tooltip]:hover:after {
+[data-tooltip]:hover:after {
     opacity: 1;
-  }
+}
 
-  div[data-tooltip]:after {
+div[data-tooltip]:after {
     left: 5px!important;
-  }
+}
 
 dialog h2 {
     text-align: center;
@@ -130,6 +130,15 @@ dialog h2 {
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
     background-color: var(--background);
     color: var(--off-white);
+        /* content: ""; 
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0; 
+        z-index: 10; */
+        content: "";
+        /* transform: translate(0, -200%); */
+        animation: slideIn 600ms ease-out;
+        transition: all 400ms ease-in;
     clip-path: polygon(
         0 5%,
         2% 0,
@@ -141,6 +150,34 @@ dialog h2 {
         0% 100%,
         0% 100%
       )
+}
+
+/* .modal::before {
+    content: "";
+    position: absolute;
+    transform: translate(0, -200%);
+    transition: all 2s ease-in;
+} */
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-200%);
+    }
+  
+    to {
+        transform: translateY(0%);
+    }
+  }
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0%);
+    }
+  
+    to {
+      
+        transform: translateY(-200%);
+    }
 }
   
 .modal::backdrop {
