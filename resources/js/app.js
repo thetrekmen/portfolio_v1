@@ -11,4 +11,12 @@ closeModal.addEventListener("click", () => {
 });
 
 
+const sideEmail = document.querySelector(".side-email");
+const email = "jonespm1.dev@gmail.com";
+
+sideEmail.addEventListener('click', function(event) {
+  
+	navigator.clipboard.writeText(email);
+});
+
 
