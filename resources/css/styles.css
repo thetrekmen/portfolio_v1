@@ -804,6 +804,12 @@ nav {
     height: 99%;
 }
 
+/*============MODAL==============*/
+/*============MODAL==============*/
+/*============MODAL==============*/
+/*============MODAL==============*/
+/*============MODAL==============*/
+
 .project-modal {
     padding: 3em 3em;
     max-width: 50vw;
@@ -811,8 +817,7 @@ nav {
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
     background-color: var(--background);
     color: var(--off-white);
-    z-index: 102;
-    pointer-events: none;
+    z-index: 110;
     clip-path: polygon(
         0 5%,
         2% 0,
@@ -828,6 +833,8 @@ nav {
 
 .project-modal::backdrop {
     background: rgb(0 0 0 / 0.7);
+    pointer-events: none;
+    cursor: none;
 }
 
 .project-modal-content {
@@ -836,9 +843,11 @@ nav {
     position: relative;
     display: flex;
     flex-direction: column;
+    pointer-events: none;
+    cursor: none;
 }
 
-.project .project-modal .project-modal-content .project-modal-img-wrapper {
+.project-modal .project-modal-content .project-modal-img-wrapper {
     height: 40%;
     background-position: center;
     background-size: cover;
@@ -850,6 +859,7 @@ nav {
 
 .project-modal-content h2 {
     font-size: 2rem;
+    text-align: center;
 }
 
 .project-modal-icon-wrapper {
@@ -867,80 +877,28 @@ nav {
     line-height: 1.4rem;
 }
 
+/* PROJECT BUTTONS */
+
 .project-modal-button-wrapper {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 3rem;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    /* outline: 1px red solid; */
-    padding: .5rem;
+    -webkit-transform: translateX(-50%);
+    -moz-filter-transform: translateX(-50%);
+    -ms-filter-transform: translateX(-50%);
+    -o-filter-transform: translateX(-50%);
+
 }
 
-.modal-button-wrapper {
-    width: 5rem;
-    height: 2.5rem;
-    /* outline: #ff00c8 solid 1px; */
-    position: relative;
-    overflow: hidden;
+.project-button-wrapper {
+    padding: 1rem;
 }
 
-.project-button {
-    position: absolute;
-    width: 5rem;
-    height: 2rem;
-    left: 0;
-    text-align: center;
-    padding-top:  .7rem;
-
-    background-color: var(--background-grey);
-    /* overflow: hidden; */
-    clip-path: polygon(
-        0 30%,
-        20% 0,
-        100% 0,
-        100% 0%,
-        100% 70%,
-        80% 100%,
-        0% 100%,
-        0% 100%,
-        0% 100%
-      );
-    cursor: pointer;
-    pointer-events: auto;
-}
-
-.modal-button-wrapper .project-github-button:active {
-    text-shadow: 0 0 0.2em var(--cyan);
-}
-
-.modal-button-wrapper .project-live-button:active {
-    text-shadow: 0 0 0.2em var(--pink);
-}
-
-.github-wrapper:hover {
-    filter: drop-shadow(1px 0px 0px var(--cyan))
-    drop-shadow(-1px 0px 0px var(--cyan))
-    drop-shadow(0px 1px 0px var(--cyan))
-    drop-shadow(0px -1px 0px var(--cyan))
-    drop-shadow(1px 1px 0px var(--cyan))
-    drop-shadow(-1px -1px 0px var(--cyan))
-    drop-shadow(-1px 1px 0px var(--cyan))
-    drop-shadow(1px -1px 0px var(--cyan));
-    -webkit-filter: drop-shadow(1px 0px 0px var(--cyan))
-    drop-shadow(-1px 0px 0px var(--cyan))
-    drop-shadow(0px 1px 0px var(--cyan))
-    drop-shadow(0px -1px 0px var(--cyan))
-    drop-shadow(1px 1px 0px var(--cyan))
-    drop-shadow(-1px -1px 0px var(--cyan))
-    drop-shadow(-1px 1px 0px var(--cyan))
-    drop-shadow(1px -1px 0px var(--cyan));
-    overflow: visible;
-}
-
-.live-wrapper:hover {
+.live-button-wrapper:hover {
     filter: drop-shadow(1px 0px 0px var(--pink))
     drop-shadow(-1px 0px 0px var(--pink))
     drop-shadow(0px 1px 0px var(--pink))
@@ -957,48 +915,89 @@ nav {
     drop-shadow(-1px -1px 0px var(--pink))
     drop-shadow(-1px 1px 0px var(--pink))
     drop-shadow(1px -1px 0px var(--pink));
-    overflow: visible;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.project-github-button:active {
-    -webkit-transform: translateY(2px);
-    -moz-transform: translateY(2px);
-    -ms-transform: translateY(2px);
-    -o-transform: translateY(2px);
-    transform: translateY(2px);
-    -webkit-filter: drop-shadow(0 0 0.2em var(--cyan));
-    -moz-filter: drop-shadow(0 0 0.2em var(--cyan));
-    -ms-filter: drop-shadow(0 0 0.2em var(--cyan));
-    -o-filter: drop-shadow(0 0 0.2em var(--cyan));
-    filter: drop-shadow(0 0 0.2em var(--cyan));
+.github-button-wrapper:hover {
+    filter: drop-shadow(1px 0px 0px var(--cyan))
+    drop-shadow(-1px 0px 0px var(--cyan))
+    drop-shadow(0px 1px 0px var(--cyan))
+    drop-shadow(0px -1px 0px var(--cyan))
+    drop-shadow(1px 1px 0px var(--cyan))
+    drop-shadow(-1px -1px 0px var(--cyan))
+    drop-shadow(-1px 1px 0px var(--cyan))
+    drop-shadow(1px -1px 0px var(--cyan));
+    -webkit-filter: drop-shadow(1px 0px 0px var(--cyan))
+    drop-shadow(-1px 0px 0px var(--cyan))
+    drop-shadow(0px 1px 0px var(--cyan))
+    drop-shadow(0px -1px 0px var(--cyan))
+    drop-shadow(1px 1px 0px var(--cyan))
+    drop-shadow(-1px -1px 0px var(--cyan))
+    drop-shadow(-1px 1px 0px var(--cyan))
+    drop-shadow(1px -1px 0px var(--cyan));
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.project-live-button:active {
-    -webkit-transform: translateY(2px);
-    -moz-transform: translateY(2px);
-    -ms-transform: translateY(2px);
-    -o-transform: translateY(2px);
-    transform: translateY(2px);
-    -webkit-filter: drop-shadow(0 0 0.2em var(--pink));
-    -moz-filter: drop-shadow(0 0 0.2em var(--pink));
-    -ms-filter: drop-shadow(0 0 0.2em var(--pink));
-    -o-filter: drop-shadow(0 0 0.2em var(--pink));
-    filter: drop-shadow(0 0 0.2em var(--pink));
+.project-button {
+    display: inline-block;
+    background-color: var(--background-grey);
+    padding: .5rem 2rem;
+    pointer-events: auto;
+    cursor: pointer;
+    clip-path: polygon(
+        0 30%,
+        10% 0,
+        100% 0,
+        100% 0%,
+        100% 70%,
+        90% 100%,
+        10% 100%,
+        0% 100%,
+        0% 100%
+      );
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin-top: .2rem;
 }
 
-.portfolio-projects-1 .project-modal .project-modal-content .project-modal-img-wrapper {
+  
+.live-button-wrapper .project-button:active {
+    /* transition: outline 100ms ease-in; */
+    /* background-color: var(--background-grey); */
+    box-shadow: .5px .5px 3px;
+    transform: translateY(4px);
+    text-shadow: 0 0 0.2em var(--pink);
+}
+
+.github-button-wrapper .project-button:active {
+    /* transition: outline 100ms ease-in; */
+    /* background-color: var(--background-grey); */
+    box-shadow: .5px .5px 3px;
+    transform: translateY(4px);
+    text-shadow: 0 0 0.2em var(--cyan);
+}
+
+/*  */
+
+
+#modal1 .project-modal-content .project-modal-img-wrapper {
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 21.37.06.png");
 }
 
-.portfolio-projects-2 .project-modal .project-modal-content .project-modal-img-wrapper {
+#modal2 .project-modal-content .project-modal-img-wrapper {
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.14.46.png");
 }
 
-.portfolio-projects-3 .project-modal .project-modal-content .project-modal-img-wrapper {
+#modal3 .project-modal-content .project-modal-img-wrapper {
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.07.19.png");
 }
 
-.portfolio-projects-4 .project-modal .project-modal-content .project-modal-img-wrapper {
+#modal4 .project-modal-content .project-modal-img-wrapper {
     background-image:url("/resources/images/Screen\ Shot\ 2022-06-25\ at\ 22.07.28.png");
 }
 

@@ -1,4 +1,8 @@
 /* Get In Touch Modal */
+/* Get In Touch Modal */
+/* Get In Touch Modal */
+/* Get In Touch Modal */
+/* Get In Touch Modal */
   const modal = document.querySelector(".modal");
   const openModal = document.querySelector(".open-button");
   const closeModal = document.querySelector(".close-button");
@@ -14,18 +18,11 @@
   });
 
 
-/* Copy Email */
-  const sideEmail = document.querySelector(".side-email");
-  const email = "jonespm1.dev@gmail.com";
-
-  sideEmail.addEventListener('click', function(event) {
-    
-    navigator.clipboard.writeText(email);
-  });
-
-
 /* Project Modals */
-
+/* Project Modals */
+/* Project Modals */
+/* Project Modals */
+/* Project Modals */
 /* Modal 1 */
 const projectModal1 = document.querySelector("#modal1");
 const openProject1 = document.querySelector("#open-project1");
@@ -58,6 +55,18 @@ const openProject4 = document.querySelector("#open-project4");
     projectModal4.showModal();
   });
 
+
+/* Copy Email */
+/* Copy Email */
+/* Copy Email */
+/* Copy Email */
+/* Copy Email */
+const sideEmail = document.querySelector(".side-email");
+const email = "jonespm1.dev@gmail.com";
+
+sideEmail.addEventListener('click', function(event) {
+  navigator.clipboard.writeText(email);
+});
 
 
 
