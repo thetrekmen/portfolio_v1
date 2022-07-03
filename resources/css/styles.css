@@ -1046,5 +1046,20 @@ footer p a:hover {
     color: var(--white);
 }
 
+.project-modal-close-wrapper {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor:pointer;
+    z-index: 120;
+}
 
+.project-modal-close {
+    background: var(--background);
+    position: relative;
+}
 
+.project-modal-close:active {
+transform: translateY(4px);
+text-shadow: 0 0 0.2em var(--cyan);
+}
