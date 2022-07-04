@@ -511,18 +511,9 @@ nav {
     position: relative;
 }
 
-.motivations-string-container {
-    position: relative;
+.motivations-string-container .type {
+    inline-size: 150px;
 }
-
-
-
-.motivations-string-container .motivations-string {
-    position: relative;
-    height: 2rem;
-    overflow: hidden;
-}
-
 
 .skills-variable-statment {
     /* outline: 1px blue solid; */
