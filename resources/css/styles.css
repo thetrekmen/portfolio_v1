@@ -500,20 +500,17 @@ nav {
     margin-left: 2rem;
 }
 
-.motivations-wrapper div {
+.type {
+    font-size: 2rem;
+  }
+  
+  .motivation-word {
     display: inline-block;
-
-}
-
-.motivations-string-wrapper {
-    height: 2rem;
-    /* outline: 1px blue solid; */
-    position: relative;
-}
-
-.motivations-string-container .type {
-    inline-size: 150px;
-}
+  }
+  
+  .motivations-container {
+    display: inline-block;
+  }
 
 .skills-variable-statment {
     /* outline: 1px blue solid; */
@@ -1038,4 +1035,32 @@ footer p a:hover {
 -o-transform: translateY(2px);
 transform: translateY(2px);
 text-shadow: 0 0 0.2em var(--off-white);
+}
+
+.ityped-cursor {
+    font-size: 2.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.5s ease-in-out infinite;
+    -moz-animation: blink 0.5s ease-in-out infinite;
+    animation: blink 0.5s ease-in-out infinite;
+    animation-direction: alternate;
+    color: rgba(255, 110, 16, 0.2)
+}
+ 
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+ 
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
 }
