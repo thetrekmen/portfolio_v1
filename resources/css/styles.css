@@ -344,6 +344,7 @@ nav {
     margin: 0 auto;
     position: fixed;
     z-index: 100;
+    background-color: var(--background-dark);
 }
 
 .logo-nav-wrapper {
@@ -352,7 +353,6 @@ nav {
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    background-color: var(--background-dark);
 }
 
 .logo-nav {
