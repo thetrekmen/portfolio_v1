@@ -164,6 +164,12 @@ function projectOne() {
     event.stopPropagation()
     return false
   }
+
+  slides1.oncontextmenu = function(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    return false
+  }
   
   function touchStart(index) {
   return function (event) {
@@ -225,96 +231,102 @@ function projectOne() {
   
 
 function projectTwo() {
-  const slider2 = document.querySelector(".slider-container-2"),
-  slides2 = Array.from(document.querySelectorAll(".slide2"))
+const slider2 = document.querySelector(".slider-container-2"),
+slides2 = Array.from(document.querySelectorAll(".slide2"))
 
-  let isDragging = false,
-  startPos = 0,
-  currentTranslate = 0,
-  prevTranslate = 0,
-  animationID = 0,
-  currentIndex = 0
+let isDragging = false,
+startPos = 0,
+currentTranslate = 0,
+prevTranslate = 0,
+animationID = 0,
+currentIndex = 0
 
-  slides2.forEach((slide2, index) => {
-  const slideImage2 = slide2.querySelector("img")
-  slideImage2.addEventListener("dragstart", (e) => e.
-    preventDefault())
+slides2.forEach((slide2, index) => {
+const slideImage2 = slide2.querySelector("img")
+slideImage2.addEventListener("dragstart", (e) => e.
+  preventDefault())
 
-  //Touch events
-  slide2.addEventListener("touchstart", touchStart(index))
-  slide2.addEventListener("touchend", touchEnd)
-  slide2.addEventListener("touchmove", touchMove)
+//Touch events
+slide2.addEventListener("touchstart", touchStart(index))
+slide2.addEventListener("touchend", touchEnd)
+slide2.addEventListener("touchmove", touchMove)
 
-  //mouse events
-  slide2.addEventListener("mousedown", touchStart(index))
-  slide2.addEventListener("mouseup", touchEnd)
-  slide2.addEventListener("mouseleave", touchEnd)
-  slide2.addEventListener("mousemove", touchMove)
-  })
+//mouse events
+slide2.addEventListener("mousedown", touchStart(index))
+slide2.addEventListener("mouseup", touchEnd)
+slide2.addEventListener("mouseleave", touchEnd)
+slide2.addEventListener("mousemove", touchMove)
+})
 
-  // disable context menu
-  slider2.oncontextmenu = function(event) {
-    event.preventDefault()
-    event.stopPropagation()
-    return false
+// disable context menu
+slider2.oncontextmenu = function(event) {
+  event.preventDefault()
+  event.stopPropagation()
+  return false
+}
+
+slides2.oncontextmenu = function(event) {
+  event.preventDefault()
+  event.stopPropagation()
+  return false
+}
+
+function touchStart(index) {
+return function (event) {
+  currentIndex = index
+  startPos = getPositionX(event)
+  isDragging = true
+
+  animationID = requestAnimationFrame(animation)
+  slider2.classList.add("grabbing")
   }
+}
 
-  function touchStart(index) {
-  return function (event) {
-    currentIndex = index
-    startPos = getPositionX(event)
-    isDragging = true
+function touchEnd() {
+  isDragging = false
+  cancelAnimationFrame(animationID)
 
-    animationID = requestAnimationFrame(animation)
-    slider2.classList.add("grabbing")
-    }
+  const movedBy = currentTranslate - prevTranslate
+
+  if (movedBy < -100 && currentIndex < slides2.length - 1)
+  currentIndex += 1
+
+  if (movedBy > 100 && currentIndex > 0)
+  currentIndex -= 1
+
+  setPositionByIndex()
+
+  slider2.classList.remove("grabbing")
+}
+
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event)
+    currentTranslate = prevTranslate + currentPosition - startPos
   }
-
-  function touchEnd() {
-    isDragging = false
-    cancelAnimationFrame(animationID)
-
-    const movedBy = currentTranslate - prevTranslate
-
-    if (movedBy < -100 && currentIndex < slides2.length - 1)
-    currentIndex += 1
-
-    if (movedBy > 100 && currentIndex > 0)
-    currentIndex -= 1
-
-    setPositionByIndex()
-
-    slider2.classList.remove("grabbing")
-  }
-
-  function touchMove(event) {
-    if (isDragging) {
-      const currentPosition = getPositionX(event)
-      currentTranslate = prevTranslate + currentPosition - startPos
-    }
-  }
+}
 
 function getPositionX(event) {
   return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX
 }
 
-  function animation() {
-    setSlider2Position()
-    if(isDragging) requestAnimationFrame(animation)
-  }
+function animation() {
+  setSlider2Position()
+  if(isDragging) requestAnimationFrame(animation)
+}
 
-  function setSlider2Position() {
-    slider2.style.transform = `translateX(${currentTranslate}px)`
-    slider2.style.webkitTransform = `translateX(${currentTranslate}px)`
-    slider2.style.MozTransform = `translateX(${currentTranslate}px)`
-    slider2.style.msTransform = `translateX(${currentTranslate}px)`
-  }
+function setSlider2Position() {
+  slider2.style.transform = `translateX(${currentTranslate}px)`
+  slider2.style.webkitTransform = `translateX(${currentTranslate}px)`
+  slider2.style.MozTransform = `translateX(${currentTranslate}px)`
+  slider2.style.msTransform = `translateX(${currentTranslate}px)`
+}
 
-  function setPositionByIndex() {
-    currentTranslate = currentIndex * -window.innerWidth
-    prevTranslate = currentTranslate
-    setSlider2Position()
-  }
+function setPositionByIndex() {
+  currentTranslate = currentIndex * -window.innerWidth
+  prevTranslate = currentTranslate
+  setSlider2Position()
+}
 } projectTwo()
 
 
@@ -348,6 +360,12 @@ function projectThree() {
   
   // disable context menu
   slider3.oncontextmenu = function(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    return false
+  }
+
+  slides3.oncontextmenu = function(event) {
     event.preventDefault()
     event.stopPropagation()
     return false
@@ -442,6 +460,12 @@ function projectFour() {
   
   // disable context menu
   slider4.oncontextmenu = function(event) {
+    event.preventDefault()
+    event.stopPropagation()
+    return false
+  }
+
+  slides4.oncontextmenu = function(event) {
     event.preventDefault()
     event.stopPropagation()
     return false
